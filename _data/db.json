@@ -1,0 +1,154 @@
+{
+  "jobs": [
+    {
+      "_id": 1,
+      "title": "Product Designer",
+      "company": "Gojeck",
+      "location": "Marina East, Singapore",
+      "jobType": "Full-time",
+      "pay": [1000, 2500],
+      "urgency": "Urgently hiring",
+      "postedTime": "5 minutes ago",
+      "description": [
+        "Provide exceptional support to customers via chat, email, and phone.",
+        "Document customer issues and escalate complex cases to relevant teams."
+      ],
+      "icon": "one"
+    },
+    {
+      "_id": 2,
+      "title": "Software Engineer",
+      "company": "TechCorp",
+      "location": "Downtown, New York",
+      "jobType": "Part-time",
+      "pay": [500, 2500],
+      "urgency": "",
+      "postedTime": "2 hours ago",
+      "description": [
+        "Collaborate with the development team to create software solutions that enhance user experience.",
+        "Implement and test new features, ensuring high performance and responsiveness of applications."
+      ],
+      "icon": "two"
+    },
+    {
+      "_id": 3,
+      "title": "Marketing Specialist",
+      "company": "Brandify",
+      "location": "Silicon Valley, California",
+      "jobType": "Full-time",
+      "pay": [2500],
+      "urgency": "Urgently hiring",
+      "postedTime": "1 day ago",
+      "description": [
+        "Develop and implement effective marketing strategies to increase brand visibility.",
+        "Analyze campaign performance and make adjustments to optimize results."
+      ],
+      "icon": "three"
+    },
+    {
+      "_id": 4,
+      "title": "Data Analyst",
+      "company": "DataPros",
+      "location": "London, UK",
+      "jobType": "Contract",
+      "pay": [],
+      "urgency": "Immediate start",
+      "postedTime": "3 days ago",
+      "description": [
+        "Analyze data sets to uncover insights and trends that drive business decisions.",
+        "Collaborate with various departments to ensure data-driven strategies."
+      ],
+      "icon": "four"
+    },
+    {
+      "_id": 5,
+      "title": "UX Researcher",
+      "company": "InnoSoft",
+      "location": "Remote",
+      "jobType": "Freelance",
+      "pay": [1000, 5000],
+      "urgency": "Flexible start",
+      "postedTime": "5 days ago",
+      "description": [
+        "Conduct user research to gather insights and improve user experiences.",
+        "Work closely with product designers to implement research findings."
+      ],
+      "icon": "five"
+    },
+    {
+      "_id": 6,
+      "title": "Project Manager",
+      "company": "BuildTech",
+      "location": "Berlin, Germany",
+      "jobType": "Full-time",
+      "pay": [1500, 2500],
+      "urgency": "Immediate start",
+      "postedTime": "10 hours ago",
+      "description": [
+        "Lead cross-functional teams to deliver projects on time and within budget.",
+        "Coordinate project activities and ensure alignment with company objectives."
+      ],
+      "icon": "six"
+    },
+    {
+      "_id": 7,
+      "title": "Content Writer",
+      "company": "MediaHub",
+      "location": "Remote",
+      "jobType": "Part-time",
+      "pay": [1000, 2500],
+      "urgency": "Hiring soon",
+      "postedTime": "12 hours ago",
+      "description": [
+        "Create high-quality, engaging content for digital platforms.",
+        "Collaborate with marketing to optimize content for SEO and audience engagement."
+      ],
+      "icon": "seven"
+    },
+    {
+      "_id": 8,
+      "title": "Sales Executive",
+      "company": "SalesPro",
+      "location": "Sydney, Australia",
+      "jobType": "Full-time",
+      "pay": [1000, 3000],
+      "urgency": "Urgently hiring",
+      "postedTime": "1 day ago",
+      "description": [
+        "Develop new business opportunities and foster relationships with clients.",
+        "Achieve sales targets and contribute to overall company growth."
+      ],
+      "icon": "eight"
+    },
+    {
+      "_id": 9,
+      "title": "Customer Support Specialist",
+      "company": "HelpDesk",
+      "location": "Toronto, Canada",
+      "jobType": "Contract",
+      "pay": [1000, 10000],
+      "urgency": "Flexible start",
+      "postedTime": "2 days ago",
+      "description": [
+        "Provide exceptional support to customers via chat, email, and phone.",
+        "Document customer issues and escalate complex cases to relevant teams."
+      ],
+      "icon": "nine"
+    },
+    {
+      "_id": 10,
+      "title": "Digital Marketing Analyst",
+      "company": "Adverse",
+      "location": "San Francisco, California",
+      "jobType": "Full-time",
+      "pay": [10000],
+      "urgency": "Hiring soon",
+      "postedTime": "3 days ago",
+      "description": [
+        "Analyze digital marketing metrics to optimize campaign performance.",
+        "Work closely with marketing teams to develop data-driven strategies."
+      ],
+      "icon": "ten"
+    }
+  ]
+}
