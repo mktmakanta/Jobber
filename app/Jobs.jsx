@@ -1,6 +1,5 @@
 "use client";
 
-// import JobSearch from "@/components/JobSearch";
 import { useEffect, useState } from "react";
 import { FaSearch, FaMapMarkerAlt } from "react-icons/fa";
 
@@ -19,7 +18,7 @@ export default function Jobs() {
   const [isFilterOpen, setIsFilterOpen] = useState(false);
   /////////
 
-  // to prevent background scroll when meu is open
+  // to prevent background scroll when menu is open
   useEffect(() => {
     if (isSearchOpen || isFilterOpen) {
       document.body.style.overflow = "hidden";
