@@ -13,7 +13,7 @@ export default function FindTalent() {
   useEffect(() => {
     const intervalId = setInterval(() => {
       setCurrentImage((prevImage) => (prevImage + 1) % images.length);
-    }, 8000);
+    }, 5000);
     return () => clearInterval(intervalId);
   }, []);
 
