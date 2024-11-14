@@ -4,13 +4,13 @@ import { useState } from "react";
 
 export default function SideBar() {
   // states
-  const [postTime, setPostTime] = useState("");
-  const [jobType, setJobType] = useState([]);
-  const [salaryValue, setSalaryValue] = useState("");
-  const [salaryRange, setSalaryRange] = useState("");
-  const [jobLocation, setJobLocation] = useState([]);
-  const [jobFunction, setJobFunction] = useState([]);
-  const [selectedSalary, setSelectedSalary] = useState("");
+  const [postTime, setPostTime] = useState(""); //
+  const [jobType, setJobType] = useState([]); //
+  const [payValue, setPayValue] = useState(""); //
+  const [jobLocation, setJobLocation] = useState([]); //
+  const [jobFunction, setJobFunction] = useState([]); //
+  const [payRange, setPayRange] = useState("Custom");
+  const [selectedPay, setSelectedPay] = useState("");
 
   // functions
   const handlePostTime = (e) => {
@@ -40,21 +40,35 @@ export default function SideBar() {
         : [...prev, value]
     );
   };
-  const handleSalaryPrice = (e) => {
-    setSalaryValue(e.target.value);
-    setSelectedSalary(e.target.value);
+  const handlePayPrice = (e) => {
+    setPayValue(e.target.value);
   };
-  const handleSalaryRange = (e) => {
-    setSalaryRange(e.target.value);
+  const handlePayRange = (e) => {
+    setPayValue(e.target.value);
+    setPayRange(e.target.value);
   };
 
-  console.log(salaryValue);
+  const handleSelected = (a) => {
+    setSelectedPay(a);
+  };
+  const resetFilters = () => {
+    setPostTime("");
+    setJobType([]);
+    setPayValue("");
+    setPayRange("Custom");
+    setJobLocation([]);
+    setJobFunction([]);
+    setSelectedPay("");
+  };
 
+  console.log(payValue);
   return (
     <main className="hidden lg:block h-full col-span-2  py-3 rounded-md shadow-md ring-1 ring-slate-200/70 ">
       <div className="header flex justify-between items-center p-4 border-b-2 border-slate-200/80">
         <h2 className="font-medium">Filter</h2>
-        <small className="text-red-500 font-medium">Clear all</small>
+        <small onClick={resetFilters} className="text-red-500 font-medium">
+          Clear all
+        </small>
       </div>
       <div className="filters divide-y-2 divide-slate-200/75 px-4 space-y-4">
         <div className="date-post py-2 pt-4 px-3 space-y-3">
@@ -119,8 +133,8 @@ export default function SideBar() {
             </label>
           </div>
         </div>
-        <div className="range-salary px-3 py-2 space-y-3 pt-6">
-          <h1 className=" font-semibold">Range Salary</h1>
+        <div className="range-pay px-3 py-2 space-y-3 pt-6">
+          <h1 className=" font-semibold">Range pay</h1>
           <div className="divide-y divide-dashed space-y-4 divide-green-600">
             <div className="checklist grid grid-cols-2 grid-rows-2 gap-2">
               <label className="flex items-center">
@@ -128,7 +142,8 @@ export default function SideBar() {
                   type="radio"
                   name="range"
                   value="1000"
-                  onChange={handleSalaryPrice}
+                  onChange={handlePayPrice}
+                  onClick={() => handleSelected("option1")}
                   id=""
                   className="mx-2 size-4 rounded-full  accent-green-600"
                 />
@@ -139,7 +154,8 @@ export default function SideBar() {
                   type="radio"
                   name="range"
                   value="2500"
-                  onChange={handleSalaryPrice}
+                  onChange={handlePayPrice}
+                  onClick={() => handleSelected("option2")}
                   id=""
                   className="mx-2 size-4 rounded-full  accent-green-600"
                 />
@@ -150,7 +166,8 @@ export default function SideBar() {
                   type="radio"
                   name="range"
                   value="5000"
-                  onChange={handleSalaryPrice}
+                  onChange={handlePayPrice}
+                  onClick={() => handleSelected("option3")}
                   id=""
                   className="mx-2 size-4 rounded-full  accent-green-600"
                 />
@@ -160,8 +177,9 @@ export default function SideBar() {
                 <input
                   type="radio"
                   name="range"
-                  value="customs"
-                  onChange={handleSalaryPrice}
+                  value={payRange}
+                  onChange={handlePayPrice}
+                  onClick={() => handleSelected("customize")}
                   id=""
                   className="mx-2 size-4 rounded-full  accent-green-600 "
                 />
@@ -170,16 +188,16 @@ export default function SideBar() {
             </div>
             <div className="range-slide flex justify-center pt-2">
               <label className="space-y-2">
-                <div className="text-center">{salaryRange}</div>
+                <div className="text-center">{payRange}</div>
                 <div className=" flex justify-center items-center gap-2">
                   <span> $5000</span>
                   <input
                     type="range"
                     min="5000"
                     max="100000"
-                    value={salaryRange}
-                    onChange={handleSalaryRange}
-                    disabled={selectedSalary !== "customs"}
+                    value={payRange}
+                    onChange={handlePayRange}
+                    disabled={selectedPay !== "customize"}
                     name="range-slide"
                     id=""
                     className="accent-green-600"
