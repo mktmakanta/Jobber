@@ -3,35 +3,28 @@
 import React, { useState, useEffect } from "react";
 
 export default function FindTalent() {
-  // Array of local background images
   const images = [
-    "/images/talent-hero/talent1.jpg", // Local images stored in the public/images folder
+    "/images/talent-hero/talent1.jpg",
     "/images/talent-hero/talent2.jpg",
     "/images/talent-hero/talent3.jpg",
   ];
-
   const [currentImage, setCurrentImage] = useState(0);
 
   useEffect(() => {
-    // Change the background image every 5 seconds
     const intervalId = setInterval(() => {
-      setCurrentImage((prevImage) => (prevImage + 1) % images.length); // Change image
-    }, 5000); // 5000ms = 5 seconds
-
-    // Clean up the interval on component unmount
+      setCurrentImage((prevImage) => (prevImage + 1) % images.length);
+    }, 8000);
     return () => clearInterval(intervalId);
   }, []);
 
   return (
     <div className="bg-gray-50 text-gray-900">
-      {/* Hero Section with Carousel Background and Darken Filter */}
       <section
         className="relative text-white py-16 bg-cover bg-center transition-all duration-700 ease-in-out"
         style={{
           backgroundImage: `url(${images[currentImage]})`,
         }}
       >
-        {/* Darken overlay */}
         <div
           className="absolute inset-0 bg-black opacity-50 z-0"
           style={{
