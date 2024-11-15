@@ -127,19 +127,18 @@ export default function JobsFilter() {
     setJobFunction([]);
     setSelectedPay("");
   };
-  console.log(payValue);
+  // console.log(payValue);
 
   return (
-    <main className="lg:grid grid-cols-7 h-full gap-4 p-5">
-      {/* selection/filter side bar inputs  filtering secttion  */}
-      <section className="lg:col-span-2 hidden lg:block h-full py-3 rounded-md shadow-md ring-1 ring-slate-200/70">
+    <main className="  p-5">
+      <section className="   w-10  py-3 rounded-md shadow-md ring-1 ring-slate-200/70">
         <div className="header flex justify-between items-center p-4 border-b-2 border-slate-200/80">
           <h2 className="font-medium">Filter</h2>
           <small onClick={resetFilters} className="text-red-500 font-medium">
             Clear all
           </small>
         </div>
-        <div className="filters divide-y-2 divide-slate-200/75 px-4 space-y-4">
+        <div className="filters divide-y-2 bg-yellow-500  divide-slate-200/75 px-4 space-y-4">
           <div className="date-post py-2 pt-4 px-3 space-y-3">
             <h1 className="font-semibold">Date Post</h1>
             <select
@@ -401,7 +400,7 @@ export default function JobsFilter() {
       </section>
 
       {/* search input filtering secttion  */}
-      <section className="lg:col-span-5  space-y-3">
+      <section className="  space-y-3">
         {/* search inputs*/}
         <div className="search flex justify-between items-center ring-1 ring-slate-200/70 shadow-sm rounded-md p-2  space-x-3">
           <div className=" hidden search-fields lg:grid grid-cols-2 items-center divide-x-2 w-full pl-4">
@@ -478,10 +477,10 @@ export default function JobsFilter() {
                 X
               </div>
             </div>
+            {/* // filter */}
             <div className=" flex items-center  ">
-              {/* // filter */}
               {isFilterOpen ? (
-                <section className=" max-w-2xl mx-auto ">
+                <section className="  mx-auto ">
                   <div className=" h-full col-span-2  py-3 rounded-md shadow-md ring-1 ring-slate-200/70 ">
                     <div className="filters divide-y-2 divide-slate-200/75 px-4 space-y-4">
                       <div className="date-post py-2 pt-4 px-3 space-y-3">
