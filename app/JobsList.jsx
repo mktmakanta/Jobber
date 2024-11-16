@@ -3,7 +3,7 @@ import { FaMapMarkerAlt } from "react-icons/fa";
 
 export default function JobsList({ filteredJobs }) {
   return (
-    <main className=" space-y-3">
+    <main className="  space-y-3">
       <h1 className="text-slate-400  font-semibold">
         {filteredJobs.length} Jobs Available
       </h1>
