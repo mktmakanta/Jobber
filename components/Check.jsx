@@ -1,5 +1,4 @@
-import React from "react";
-import { useSession } from "next-auth/react";
+import { useSession, signOut, signIn } from "next-auth/react";
 
 export default function Check() {
   const { data: session } = useSession();
@@ -7,9 +6,13 @@ export default function Check() {
   return (
     <main className="">
       {session ? (
-        <button className="">Sign Out</button>
+        <button onClick={() => signOut({ callbackUrl: "/" })} className="">
+          Sign Out
+        </button>
       ) : (
-        <button className="">Sign In</button>
+        <button onClick={() => signIn()} className="">
+          Sign In
+        </button>
       )}
     </main>
   );
