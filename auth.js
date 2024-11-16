@@ -1,11 +1,12 @@
 import NextAuth from "next-auth";
 import Credentials from "next-auth/providers/credentials";
+import GitHubProvider from "next-auth/providers/github";
 
 export const { handlers, signIn, signOut, auth } = NextAuth({
   providers: [
     Credentials({
       credentials: {
-        username: { label: "Email", type: "email", placeholder: "email" },
+        email: { label: "Email", type: "email", placeholder: "email" },
         password: {
           label: "Password",
           type: "password",
@@ -13,18 +14,36 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
         },
       },
       async authorize(credentials) {
-        let user = null;
-
-        user = {
-          id: "1",
-          name: "Muhammad",
-          email: "makanta66573@gmail.com",
-        };
-        if (!user) {
-          return null;
+        validEmail = "makanta66573@gmail.com";
+        validPassword = "mkt1MAKANTA";
+        if (
+          credentials?.username === validEmail &&
+          credentials?.password === validPassword
+        ) {
+          return {
+            id: "1",
+            name: "makanta muhammad",
+            email: validEmail,
+          };
         }
-        return user;
+        return null;
       },
     }),
+    GitHubProvider({
+      clientId: process.env.AUTH_GITHUB_ID,
+      clientSecret: process.env.AUTH_GITHUB_SECRET,
+    }),
   ],
+  secret: process.env.NEXTAUTH_SECRET,
+  debug: true,
+  pages: {
+    signIn: "/auth/signin",
+    // signOut: "/auth/signin",
+    error: "/auth/error",
+  },
+  callbacks: {
+    async redirect({ url, baseUrl }) {
+      return baseUrl;
+    },
+  },
 });
