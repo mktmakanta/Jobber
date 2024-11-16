@@ -7,6 +7,7 @@ import Footer from "@/components/Footer";
 const roboto = Roboto({
   weight: ["400", "700"],
   subsets: ["latin"],
+  display: "swap",
 });
 export const metadata = {
   title: "Jobber website",
@@ -16,8 +17,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <SessionProvider>
-      <html lang="en">
-        <body className={roboto.className}>
+      <html lang="en" className={roboto.className}>
+        <body>
           <Navbar />
           {children}
           <Footer />
